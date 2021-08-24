@@ -194,11 +194,10 @@ class MainActivity : AppCompatActivity()
             }
         }
 
-        //The items need to be sorted first by listId, then by name. The naive way of doing this
-        //would be to make a series of sublists containing each group of listIds, sorting those,
-        //and then recombine them into one list afterwards. However, since sortBy is a stable sort,
-        //it is much easier to simply sort by name first, and then sort by listId, since the sort by
-        //name will be preserved
+        //The items need to be sorted first by listId, then by name. This is accomplished
+        //by running a sort by name, and then by listId. Since sortBy is a stable sort, the
+        //sorting by name will be maintained when we make sure that everything is sorted
+        //by listId correctly
         itemsPlusNameInts.sortBy { it.first }
         itemsPlusNameInts.sortBy { it.second.listId}
 

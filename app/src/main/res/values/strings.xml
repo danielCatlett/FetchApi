@@ -2,4 +2,6 @@
     <string name="app_name">FetchApi</string>
     <string name="title">API Values</string>
     <string name="SearchText">Search</string>
+    <string name="NameSearch">Name Search</string>
+    <string name="SearchButton">Search Icon</string>
 </resources>
